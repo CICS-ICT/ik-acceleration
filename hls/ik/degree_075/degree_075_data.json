@@ -1,0 +1,1455 @@
+{
+  "Top": "hls_ik",
+  "RtlTop": "hls_ik",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "0",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "qvirtex7",
+    "Device": "xq7vx690t",
+    "Package": "rf1157",
+    "Speed": "-2i"
+  },
+  "HlsSolution": {
+    "DirectiveTcl": [
+      "set_directive_inline HLS::clear_frame ",
+      "set_directive_inline HLS::clear_6 ",
+      "set_directive_inline HLS::assign_3 ",
+      "set_directive_inline HLS::assign_6 ",
+      "set_directive_inline HLS::assign_9 ",
+      "set_directive_inline HLS::assign_12 ",
+      "set_directive_inline HLS::add_pp ",
+      "set_directive_inline HLS::add_cp ",
+      "set_directive_inline HLS::sub_cp6 ",
+      "set_directive_inline HLS::sub_pp ",
+      "set_directive_inline HLS::dot ",
+      "set_directive_inline HLS::dot6 ",
+      "set_directive_inline HLS::cross ",
+      "set_directive_inline HLS::mul_cp ",
+      "set_directive_inline HLS::mul_Mp ",
+      "set_directive_inline HLS::mul_MM ",
+      "set_directive_inline HLS::mul_Fp ",
+      "set_directive_inline HLS::mul_FF ",
+      "set_directive_inline HLS::rot2M ",
+      "set_directive_inline HLS::M2rot ",
+      "set_directive_inline HLS::diff -off",
+      "set_directive_unroll HLS::my_fk_solver\/LOOP_FK_64 ",
+      "set_directive_unroll HLS::my_fk_solver\/LOOP_FK_32 ",
+      "set_directive_unroll HLS::my_fk_solver\/LOOP_FK_16 ",
+      "set_directive_unroll HLS::my_fk_solver\/LOOP_FK_8 ",
+      "set_directive_unroll HLS::my_fk_solver\/LOOP_FK_4 ",
+      "set_directive_unroll HLS::my_fk_solver\/LOOP_FK_2 ",
+      "set_directive_pipeline HLS::my_jac_solver\/LOOP_my_jac_solver -II 20",
+      "set_directive_inline HLS::mul_Mp_block -off",
+      "set_directive_inline HLS::mul_MM_block -off",
+      "set_directive_inline HLS::mul_Fp_block -off",
+      "set_directive_inline HLS::mul_FF_block -off",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_2 ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_4 ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_8 ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_16 ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_32 ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_64 ",
+      "set_directive_pipeline HLS::my_fk_solver\/LOOP_FK_left ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_left ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_left ",
+      "set_directive_pipeline HLS::my_fk_solver\/LOOP_FK_Joint ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_Joint ",
+      "set_directive_pipeline HLS::my_fk_solver\/LOOP_FK_Trans ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_Trans ",
+      "set_directive_pipeline HLS::my_fk_solver\/LOOP_FK_Rot ",
+      "set_directive_dependence HLS::my_fk_solver\/LOOP_FK_Rot ",
+      "set_directive_unroll HLS::my_ik\/LOOP_init -factor 16",
+      "set_directive_dependence HLS::my_ik\/LOOP_init ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_pipeline HLS::my_ik\/LOOP_JJTe_1 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_JJTe_1 ",
+      "set_directive_pipeline HLS::my_ik\/LOOP_JJTe_2 -II 4",
+      "set_directive_dependence HLS::my_ik\/LOOP_JJTe_2 ",
+      "set_directive_dataflow HLS::my_ik\/LOOP_main ",
+      "set_directive_unroll HLS::my_ik\/LOOP_update -factor 16",
+      "set_directive_dependence HLS::my_ik\/LOOP_update ",
+      "set_directive_unroll HLS::my_ik\/LOOP_return -factor 16",
+      "set_directive_dependence HLS::my_ik\/LOOP_return ",
+      "set_directive_pipeline HLS::my_fk_solver\/LOOP_my_fk_solver -II 20",
+      "set_directive_dependence HLS::my_ik\/LOOP_main ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_pipeline HLS::my_ik\/LOOP_random_method_JRe -II 75",
+      "set_directive_dependence HLS::my_ik\/LOOP_random_method_JRe ",
+      "set_directive_unroll HLS::my_ik\/LOOP_random_method_delta_q -factor 16",
+      "set_directive_dependence HLS::my_ik\/LOOP_random_method_delta_q ",
+      "set_directive_dependence HLS::my_ik\/LOOP_random_method_delta_q ",
+      "set_directive_pipeline HLS::my_ik\/LOOP_random_method_delta_q -II 8",
+      "set_directive_pipeline HLS::my_ik\/LOOP_LM_init -II 38",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_init ",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_init ",
+      "set_directive_array_partition HLS::my_ik ",
+      "set_directive_unroll HLS::my_ik\/LOOP_LM_main ",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_main ",
+      "set_directive_unroll HLS::my_ik\/LOOP_LM_update -factor 16",
+      "set_directive_pipeline HLS::my_ik\/LOOP_LM_update -II 8",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_update ",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_update ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER ",
+      "set_directive_dependence HLS::my_ik\/LOOP_JJTe_2_1 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_JRe_1 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_JRe_2 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_JRe_2_1 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_init_1 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_init_1 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_init_2 ",
+      "set_directive_dependence HLS::my_ik\/LOOP_LM_init_2 ",
+      "set_directive_array_partition HLS::my_ik\/LOOP_ITER "
+    ],
+    "DirectiveInfo": [
+      "inline HLS::clear_frame {} {}",
+      "inline HLS::clear_6 {} {}",
+      "inline HLS::assign_3 {} {}",
+      "inline HLS::assign_6 {} {}",
+      "inline HLS::assign_9 {} {}",
+      "inline HLS::assign_12 {} {}",
+      "inline HLS::add_pp {} {}",
+      "inline HLS::add_cp {} {}",
+      "inline HLS::sub_cp6 {} {}",
+      "inline HLS::sub_pp {} {}",
+      "inline HLS::dot {} {}",
+      "inline HLS::dot6 {} {}",
+      "inline HLS::cross {} {}",
+      "inline HLS::mul_cp {} {}",
+      "inline HLS::mul_Mp {} {}",
+      "inline HLS::mul_MM {} {}",
+      "inline HLS::mul_Fp {} {}",
+      "inline HLS::mul_FF {} {}",
+      "inline HLS::rot2M {} {}",
+      "inline HLS::M2rot {} {}",
+      "inline HLS::diff {{off positionBoolean1}} {}",
+      "unroll HLS::my_fk_solver\/LOOP_FK_64 {} {}",
+      "unroll HLS::my_fk_solver\/LOOP_FK_32 {} {}",
+      "unroll HLS::my_fk_solver\/LOOP_FK_16 {} {}",
+      "unroll HLS::my_fk_solver\/LOOP_FK_8 {} {}",
+      "unroll HLS::my_fk_solver\/LOOP_FK_4 {} {}",
+      "unroll HLS::my_fk_solver\/LOOP_FK_2 {} {}",
+      "pipeline HLS::my_jac_solver\/LOOP_my_jac_solver {{II 20}} {}",
+      "inline HLS::mul_Mp_block {{off positionBoolean1}} {}",
+      "inline HLS::mul_MM_block {{off positionBoolean1}} {}",
+      "inline HLS::mul_Fp_block {{off positionBoolean1}} {}",
+      "inline HLS::mul_FF_block {{off positionBoolean1}} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_2 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_4 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_8 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_16 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_32 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_64 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "pipeline HLS::my_fk_solver\/LOOP_FK_left {} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_left {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_left {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "pipeline HLS::my_fk_solver\/LOOP_FK_Joint {} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_Joint {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "pipeline HLS::my_fk_solver\/LOOP_FK_Trans {} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_Trans {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "pipeline HLS::my_fk_solver\/LOOP_FK_Rot {} {}",
+      "dependence HLS::my_fk_solver\/LOOP_FK_Rot {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "unroll HLS::my_ik\/LOOP_init {{factor 16}} {}",
+      "dependence HLS::my_ik\/LOOP_init {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredJT} {complete positionBoolean0type} {dim 1}} {}",
+      "pipeline HLS::my_ik\/LOOP_JJTe_1 {} {}",
+      "dependence HLS::my_ik\/LOOP_JJTe_1 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "pipeline HLS::my_ik\/LOOP_JJTe_2 {{II 4}} {}",
+      "dependence HLS::my_ik\/LOOP_JJTe_2 {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dataflow HLS::my_ik\/LOOP_main {} {}",
+      "unroll HLS::my_ik\/LOOP_update {{factor 16}} {}",
+      "dependence HLS::my_ik\/LOOP_update {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "unroll HLS::my_ik\/LOOP_return {{factor 16}} {}",
+      "dependence HLS::my_ik\/LOOP_return {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "pipeline HLS::my_fk_solver\/LOOP_my_fk_solver {{II 20}} {}",
+      "dependence HLS::my_ik\/LOOP_main {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredRe} {block positionBoolean0type} {factor 100} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredJRe} {complete positionBoolean0type} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredq_test} {block positionBoolean0type} {factor 10} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredp_in_LMU} {complete positionBoolean0type} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredf_LMU} {complete positionBoolean0type} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequirede_LMU} {complete positionBoolean0type} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequirede_norm} {complete positionBoolean0type} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequirede} {complete positionBoolean0type} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequirederr} {complete positionBoolean0type} {dim 1}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredJJTe} {complete positionBoolean0type} {dim 1}} {}",
+      "pipeline HLS::my_ik\/LOOP_random_method_JRe {{II 75}} {}",
+      "dependence HLS::my_ik\/LOOP_random_method_JRe {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "unroll HLS::my_ik\/LOOP_random_method_delta_q {{factor 16}} {}",
+      "dependence HLS::my_ik\/LOOP_random_method_delta_q {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_random_method_delta_q {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "pipeline HLS::my_ik\/LOOP_random_method_delta_q {{II 8}} {}",
+      "pipeline HLS::my_ik\/LOOP_LM_init {{II 38}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_init {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_init {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "array_partition HLS::my_ik {{partition positionBooleanCmd} {variable positionBooleanTextRequiredp_in} {complete positionBoolean0type} {dim 1}} {}",
+      "unroll HLS::my_ik\/LOOP_LM_main {} {}",
+      "dependence HLS::my_ik\/LOOP_LM_main {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "unroll HLS::my_ik\/LOOP_LM_update {{factor 16}} {}",
+      "pipeline HLS::my_ik\/LOOP_LM_update {{II 8}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_update {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_update {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredf} {complete positionBoolean0type} {dim 1}} {}",
+      "dependence HLS::my_ik\/LOOP_JJTe_2_1 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_JRe_1 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_JRe_2 {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_JRe_2_1 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_init_1 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_init_1 {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_init_2 {{inter positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "dependence HLS::my_ik\/LOOP_LM_init_2 {{intra positionBoolean0type} {false positionBoolean0dependent}} {}",
+      "array_partition HLS::my_ik\/LOOP_ITER {{partition positionBooleanCmd} {variable positionBooleanTextRequiredJac} {block positionBoolean0type} {factor 6} {dim 1}} {}"
+    ]
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "undef",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "hls_ik",
+    "Version": "1.0",
+    "DisplayName": "Hls_ik",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/..\/hls_ik.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/atan2_cordic_float_s.vhd",
+      "impl\/vhdl\/atan2_generic_float_s.vhd",
+      "impl\/vhdl\/atan2_generic_float_s_cordic_ctab_table_12.vhd",
+      "impl\/vhdl\/diff.vhd",
+      "impl\/vhdl\/diff_1.vhd",
+      "impl\/vhdl\/hls_ik_fadd_32ns_32ns_32_4_full_dsp_1.vhd",
+      "impl\/vhdl\/hls_ik_faddfsub_32ns_32ns_32_4_full_dsp_1.vhd",
+      "impl\/vhdl\/hls_ik_fcmp_32ns_32ns_1_1_1.vhd",
+      "impl\/vhdl\/hls_ik_fdiv_32ns_32ns_32_8_1.vhd",
+      "impl\/vhdl\/hls_ik_fmul_32ns_32ns_32_2_max_dsp_1.vhd",
+      "impl\/vhdl\/hls_ik_fsqrt_32ns_32ns_32_7_1.vhd",
+      "impl\/vhdl\/hls_ik_fsub_32ns_32ns_32_4_full_dsp_1.vhd",
+      "impl\/vhdl\/hls_ik_hls_solver_G_joint_0.vhd",
+      "impl\/vhdl\/hls_ik_hls_solver_G_joint_t_9.vhd",
+      "impl\/vhdl\/hls_ik_hls_solver_G_tip_0.vhd",
+      "impl\/vhdl\/hls_ik_mul_80ns_24ns_104_2_1.vhd",
+      "impl\/vhdl\/hls_ik_mul_mul_15ns_15ns_30_1_1.vhd",
+      "impl\/vhdl\/hls_ik_mul_mul_15ns_15s_30_1_1.vhd",
+      "impl\/vhdl\/hls_ik_mux_83_1_1_1.vhd",
+      "impl\/vhdl\/hls_ik_mux_104_32_1_1.vhd",
+      "impl\/vhdl\/hls_ik_mux_164_1_1_1.vhd",
+      "impl\/vhdl\/hls_ik_mux_1007_32_1_1.vhd",
+      "impl\/vhdl\/hls_ik_srem_32ns_11ns_11_36_1.vhd",
+      "impl\/vhdl\/hls_ik_urem_11ns_11ns_11_15_1.vhd",
+      "impl\/vhdl\/my_fk_solver.vhd",
+      "impl\/vhdl\/my_fk_solver_1.vhd",
+      "impl\/vhdl\/my_ik.vhd",
+      "impl\/vhdl\/my_ik_at.vhd",
+      "impl\/vhdl\/my_ik_HLS_IK_HLS_Random_s.vhd",
+      "impl\/vhdl\/my_ik_HLS_IK_HLS_step_le.vhd",
+      "impl\/vhdl\/my_ik_Jac_0.vhd",
+      "impl\/vhdl\/my_ik_q_out.vhd",
+      "impl\/vhdl\/my_jac_solver.vhd",
+      "impl\/vhdl\/sin_or_cos_float_s.vhd",
+      "impl\/vhdl\/sin_or_cos_float_s_ref_4oPi_table_100_V.vhd",
+      "impl\/vhdl\/sin_or_cos_float_s_second_order_float_2.vhd",
+      "impl\/vhdl\/sin_or_cos_float_s_second_order_float_3.vhd",
+      "impl\/vhdl\/sin_or_cos_float_s_second_order_float_s.vhd",
+      "impl\/vhdl\/hls_ik.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/atan2_cordic_float_s.v",
+      "impl\/verilog\/atan2_generic_float_s.v",
+      "impl\/verilog\/atan2_generic_float_s_cordic_ctab_table_12.v",
+      "impl\/verilog\/atan2_generic_float_s_cordic_ctab_table_12_rom.dat",
+      "impl\/verilog\/diff.v",
+      "impl\/verilog\/diff_1.v",
+      "impl\/verilog\/hls_ik_fadd_32ns_32ns_32_4_full_dsp_1.v",
+      "impl\/verilog\/hls_ik_faddfsub_32ns_32ns_32_4_full_dsp_1.v",
+      "impl\/verilog\/hls_ik_fcmp_32ns_32ns_1_1_1.v",
+      "impl\/verilog\/hls_ik_fdiv_32ns_32ns_32_8_1.v",
+      "impl\/verilog\/hls_ik_fmul_32ns_32ns_32_2_max_dsp_1.v",
+      "impl\/verilog\/hls_ik_fsqrt_32ns_32ns_32_7_1.v",
+      "impl\/verilog\/hls_ik_fsub_32ns_32ns_32_4_full_dsp_1.v",
+      "impl\/verilog\/hls_ik_hls_solver_G_joint_0.v",
+      "impl\/verilog\/hls_ik_hls_solver_G_joint_0_ram.dat",
+      "impl\/verilog\/hls_ik_hls_solver_G_joint_t_9.v",
+      "impl\/verilog\/hls_ik_hls_solver_G_joint_t_9_ram.dat",
+      "impl\/verilog\/hls_ik_hls_solver_G_tip_0.v",
+      "impl\/verilog\/hls_ik_hls_solver_G_tip_0_ram.dat",
+      "impl\/verilog\/hls_ik_mul_80ns_24ns_104_2_1.v",
+      "impl\/verilog\/hls_ik_mul_mul_15ns_15ns_30_1_1.v",
+      "impl\/verilog\/hls_ik_mul_mul_15ns_15s_30_1_1.v",
+      "impl\/verilog\/hls_ik_mux_83_1_1_1.v",
+      "impl\/verilog\/hls_ik_mux_104_32_1_1.v",
+      "impl\/verilog\/hls_ik_mux_164_1_1_1.v",
+      "impl\/verilog\/hls_ik_mux_1007_32_1_1.v",
+      "impl\/verilog\/hls_ik_srem_32ns_11ns_11_36_1.v",
+      "impl\/verilog\/hls_ik_urem_11ns_11ns_11_15_1.v",
+      "impl\/verilog\/my_fk_solver.v",
+      "impl\/verilog\/my_fk_solver_1.v",
+      "impl\/verilog\/my_ik.v",
+      "impl\/verilog\/my_ik_at.v",
+      "impl\/verilog\/my_ik_HLS_IK_HLS_Random_s.v",
+      "impl\/verilog\/my_ik_HLS_IK_HLS_Random_s_rom.dat",
+      "impl\/verilog\/my_ik_HLS_IK_HLS_step_le.v",
+      "impl\/verilog\/my_ik_HLS_IK_HLS_step_le_rom.dat",
+      "impl\/verilog\/my_ik_Jac_0.v",
+      "impl\/verilog\/my_ik_q_out.v",
+      "impl\/verilog\/my_jac_solver.v",
+      "impl\/verilog\/sin_or_cos_float_s.v",
+      "impl\/verilog\/sin_or_cos_float_s_ref_4oPi_table_100_V.v",
+      "impl\/verilog\/sin_or_cos_float_s_ref_4oPi_table_100_V_rom.dat",
+      "impl\/verilog\/sin_or_cos_float_s_second_order_float_2.v",
+      "impl\/verilog\/sin_or_cos_float_s_second_order_float_2_rom.dat",
+      "impl\/verilog\/sin_or_cos_float_s_second_order_float_3.v",
+      "impl\/verilog\/sin_or_cos_float_s_second_order_float_3_rom.dat",
+      "impl\/verilog\/sin_or_cos_float_s_second_order_float_s.v",
+      "impl\/verilog\/sin_or_cos_float_s_second_order_float_s_rom.dat",
+      "impl\/verilog\/hls_ik.v"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "Subcore": [
+      "impl\/misc\/hls_ik_ap_fadd_2_full_dsp_32_ip.tcl",
+      "impl\/misc\/hls_ik_ap_faddfsub_2_full_dsp_32_ip.tcl",
+      "impl\/misc\/hls_ik_ap_fcmp_0_no_dsp_32_ip.tcl",
+      "impl\/misc\/hls_ik_ap_fdiv_6_no_dsp_32_ip.tcl",
+      "impl\/misc\/hls_ik_ap_fmul_0_max_dsp_32_ip.tcl",
+      "impl\/misc\/hls_ik_ap_fsqrt_5_no_dsp_32_ip.tcl",
+      "impl\/misc\/hls_ik_ap_fsub_2_full_dsp_32_ip.tcl"
+    ],
+    "DesignXml": "\/home\/pnpeasy\/Documents\/vivado\/ik\/ik\/degree_075\/.autopilot\/db\/hls_ik.design.xml"
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": [
+      {
+        "name": "hls_ik_ap_fadd_2_full_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 2 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name hls_ik_ap_fadd_2_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "hls_ik_ap_faddfsub_2_full_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 2 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name hls_ik_ap_faddfsub_2_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "hls_ik_ap_fcmp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name hls_ik_ap_fcmp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Custom CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "hls_ik_ap_fdiv_6_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 6 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name hls_ik_ap_fdiv_6_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "hls_ik_ap_fmul_0_max_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name hls_ik_ap_fmul_0_max_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "hls_ik_ap_fsqrt_5_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 5 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name hls_ik_ap_fsqrt_5_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Square_Root CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "hls_ik_ap_fsub_2_full_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Subtract CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 2 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name hls_ik_ap_fsub_2_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }
+    ]
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "reset": "ap_rst"
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "ctrl_ports": "ap_start ap_done ap_idle ap_ready",
+      "ctype": {
+        "start": {"Type": "bool"},
+        "done": {"Type": "bool"},
+        "idle": {"Type": "bool"},
+        "ready": {"Type": "bool"}
+      }
+    },
+    "ap_return": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }}
+    },
+    "ap_rst": {
+      "type": "reset",
+      "polarity": "ACTIVE_HIGH",
+      "ctype": {"RST": {"Type": "bool"}}
+    },
+    "eps": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "real float",
+          "Width": "32"
+        }}
+    },
+    "f_in_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "4",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "4"
+        }}
+    },
+    "f_in_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "4",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "4"
+        }}
+    },
+    "f_in_ce1": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }}
+    },
+    "f_in_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "real float",
+          "Width": "32"
+        }}
+    },
+    "f_in_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }}
+    },
+    "hls_chain_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "12",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "12"
+        }}
+    },
+    "hls_chain_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "real float",
+          "Width": "32"
+        }}
+    },
+    "hls_joint_type_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }}
+    },
+    "hls_joint_type_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }}
+    },
+    "p_N": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }}
+    },
+    "q_in_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }}
+    },
+    "q_in_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }}
+    },
+    "q_in_ce1": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }}
+    },
+    "q_in_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "real float",
+          "Width": "32"
+        }}
+    },
+    "q_in_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }}
+    },
+    "q_out_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }}
+    },
+    "q_out_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }}
+    },
+    "q_out_ce1": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }}
+    },
+    "q_out_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "real float",
+          "Width": "32"
+        }}
+    },
+    "q_out_d1": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }}
+    },
+    "q_out_we1": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
+        }}
+    },
+    "steps": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }}
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_return": {
+      "dir": "out",
+      "width": "32"
+    },
+    "p_N": {
+      "dir": "in",
+      "width": "32"
+    },
+    "steps": {
+      "dir": "in",
+      "width": "32"
+    },
+    "eps": {
+      "dir": "in",
+      "width": "32"
+    },
+    "hls_chain_address0": {
+      "dir": "out",
+      "width": "12"
+    },
+    "hls_chain_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "hls_chain_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "hls_joint_type_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "hls_joint_type_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "hls_joint_type_q0": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "q_in_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "q_in_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "q_in_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "q_in_address1": {
+      "dir": "out",
+      "width": "7"
+    },
+    "q_in_ce1": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "q_in_q1": {
+      "dir": "in",
+      "width": "32"
+    },
+    "f_in_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "f_in_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "f_in_q0": {
+      "dir": "in",
+      "width": "32"
+    },
+    "f_in_address1": {
+      "dir": "out",
+      "width": "4"
+    },
+    "f_in_ce1": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "f_in_q1": {
+      "dir": "in",
+      "width": "32"
+    },
+    "q_out_address0": {
+      "dir": "out",
+      "width": "7"
+    },
+    "q_out_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "q_out_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "q_out_d0": {
+      "dir": "out",
+      "width": "32"
+    },
+    "q_out_address1": {
+      "dir": "out",
+      "width": "7"
+    },
+    "q_out_ce1": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "q_out_we1": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "q_out_d1": {
+      "dir": "out",
+      "width": "32"
+    }
+  },
+  "CPorts": {
+    "ap_ctrl": {
+      "interfaceRef": "ap_ctrl",
+      "dir": "out"
+    },
+    "ap_return": {
+      "interfaceRef": "ap_return",
+      "dir": "out",
+      "dataWidth": "32"
+    },
+    "p_N": {
+      "interfaceRef": "p_N",
+      "dir": "in",
+      "dataWidth": "32",
+      "handshakeRef": "ap_none"
+    },
+    "steps": {
+      "interfaceRef": "steps",
+      "dir": "in",
+      "dataWidth": "32",
+      "handshakeRef": "ap_none"
+    },
+    "eps": {
+      "interfaceRef": "eps",
+      "dir": "in",
+      "dataWidth": "32",
+      "handshakeRef": "ap_none"
+    },
+    "hls_chain_q0": {
+      "interfaceRef": "hls_chain_q0",
+      "dir": "in",
+      "dataWidth": "32",
+      "busTypeRef": "ap_memory",
+      "arraySize": "2304",
+      "handshakeRef": "ap_none"
+    },
+    "hls_joint_type_q0": {
+      "interfaceRef": "hls_joint_type_q0",
+      "dir": "in",
+      "dataWidth": "1",
+      "busTypeRef": "ap_memory",
+      "arraySize": "128",
+      "handshakeRef": "ap_none"
+    },
+    "q_in_q0": {
+      "interfaceRef": "q_in_q0",
+      "dir": "in",
+      "dataWidth": "32",
+      "busTypeRef": "ap_memory",
+      "arraySize": "128",
+      "handshakeRef": "ap_none"
+    },
+    "f_in_q0": {
+      "interfaceRef": "f_in_q0",
+      "dir": "in",
+      "dataWidth": "32",
+      "busTypeRef": "ap_memory",
+      "arraySize": "12",
+      "handshakeRef": "ap_none"
+    },
+    "q_out_d0": {
+      "interfaceRef": "q_out_d0",
+      "dir": "out",
+      "dataWidth": "32",
+      "busTypeRef": "ap_memory",
+      "arraySize": "128",
+      "handshakeRef": "ap_none"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "hls_ik",
+      "Instances": [{
+          "ModuleName": "my_ik",
+          "InstanceName": "grp_my_ik_fu_734",
+          "Instances": [
+            {
+              "ModuleName": "my_fk_solver",
+              "InstanceName": "grp_my_fk_solver_fu_82290",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82309",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82328",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82347",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82366",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82385",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82404",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82423",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82442",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_fk_solver_1",
+              "InstanceName": "grp_my_fk_solver_1_fu_82461",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_360"
+                }]
+            },
+            {
+              "ModuleName": "my_jac_solver",
+              "InstanceName": "grp_my_jac_solver_fu_82483",
+              "Instances": [{
+                  "ModuleName": "sin_or_cos_float_s",
+                  "InstanceName": "grp_sin_or_cos_float_s_fu_574"
+                }]
+            },
+            {
+              "ModuleName": "diff",
+              "InstanceName": "grp_diff_fu_82512",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82542",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82572",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82602",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82632",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82662",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82692",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82722",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82752",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            },
+            {
+              "ModuleName": "diff_1",
+              "InstanceName": "grp_diff_1_fu_82782",
+              "Instances": [{
+                  "ModuleName": "atan2_cordic_float_s",
+                  "InstanceName": "grp_atan2_cordic_float_s_fu_266",
+                  "Instances": [{
+                      "ModuleName": "atan2_generic_float_s",
+                      "InstanceName": "grp_atan2_generic_float_s_fu_171"
+                    }]
+                }]
+            }
+          ]
+        }]
+    },
+    "Metrics": {
+      "sin_or_cos_float_s": {
+        "Latency": {
+          "LatencyBest": "8",
+          "LatencyAvg": "8",
+          "LatencyWorst": "8",
+          "PipelineII": "9",
+          "PipelineDepth": "9",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.716"
+        },
+        "Area": {
+          "DSP48E": "9",
+          "FF": "1153",
+          "LUT": "2471",
+          "BRAM_18K": "0"
+        }
+      },
+      "my_fk_solver": {
+        "Latency": {
+          "LatencyBest": "1531",
+          "LatencyAvg": "1531",
+          "LatencyWorst": "1531",
+          "PipelineII": "1531",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.158"
+        },
+        "Loops": [{
+            "Name": "LOOP_my_fk_solver",
+            "TripCount": "75",
+            "Latency": "1529",
+            "PipelineII": "20",
+            "PipelineDepth": "50"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "135",
+          "FF": "13169",
+          "LUT": "13498"
+        }
+      },
+      "atan2_generic_float_s": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "46",
+          "LatencyWorst": "88",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "88",
+          "PipelineII": "1 ~ 88",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.733"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "42",
+            "Latency": "84",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "BRAM_18K": "4",
+          "DSP48E": "0",
+          "FF": "890",
+          "LUT": "3095"
+        }
+      },
+      "atan2_cordic_float_s": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "5",
+          "LatencyWorst": "97",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "97",
+          "PipelineII": "1 ~ 97",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Area": {
+          "BRAM_18K": "4",
+          "DSP48E": "2",
+          "FF": "1427",
+          "LUT": "3986"
+        }
+      },
+      "diff": {
+        "Latency": {
+          "LatencyBest": "35",
+          "LatencyAvg": "55",
+          "LatencyWorst": "166",
+          "PipelineIIMin": "35",
+          "PipelineIIMax": "166",
+          "PipelineII": "35 ~ 166",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.158"
+        },
+        "Area": {
+          "BRAM_18K": "4",
+          "DSP48E": "68",
+          "FF": "8317",
+          "LUT": "12083"
+        }
+      },
+      "my_jac_solver": {
+        "Latency": {
+          "LatencyBest": "1543",
+          "LatencyAvg": "1543",
+          "LatencyWorst": "1543",
+          "PipelineII": "1543",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.158"
+        },
+        "Loops": [{
+            "Name": "LOOP_my_jac_solver",
+            "TripCount": "75",
+            "Latency": "1541",
+            "PipelineII": "20",
+            "PipelineDepth": "62"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "91",
+          "FF": "12431",
+          "LUT": "13175"
+        }
+      },
+      "my_fk_solver_1": {
+        "Latency": {
+          "LatencyBest": "1532",
+          "LatencyAvg": "1532",
+          "LatencyWorst": "1532",
+          "PipelineII": "1532",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.158"
+        },
+        "Loops": [{
+            "Name": "LOOP_my_fk_solver",
+            "TripCount": "75",
+            "Latency": "1529",
+            "PipelineII": "20",
+            "PipelineDepth": "50"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "135",
+          "FF": "13553",
+          "LUT": "13498"
+        }
+      },
+      "diff_1": {
+        "Latency": {
+          "LatencyBest": "36",
+          "LatencyAvg": "56",
+          "LatencyWorst": "167",
+          "PipelineIIMin": "36",
+          "PipelineIIMax": "167",
+          "PipelineII": "36 ~ 167",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.158"
+        },
+        "Area": {
+          "BRAM_18K": "4",
+          "DSP48E": "68",
+          "FF": "9181",
+          "LUT": "12086"
+        }
+      },
+      "my_ik": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.972"
+        },
+        "Loops": [
+          {
+            "Name": "LOOP_init",
+            "TripCount": "4",
+            "Latency": "46",
+            "PipelineII": "",
+            "PipelineDepth": "10"
+          },
+          {
+            "Name": "LOOP_ITER",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepthMin": "15304",
+            "PipelineDepthMax": "15606",
+            "PipelineDepth": "15304 ~ 15606",
+            "Loops": [
+              {
+                "Name": "LOOP_JJTe_1",
+                "TripCount": "75",
+                "Latency": "102",
+                "PipelineII": "1",
+                "PipelineDepth": "29"
+              },
+              {
+                "Name": "LOOP_JJTe_2",
+                "TripCount": "75",
+                "Latency": "307",
+                "PipelineII": "4",
+                "PipelineDepth": "12"
+              },
+              {
+                "Name": "LOOP_random_method_JRe",
+                "TripCount": "100",
+                "Latency": "7891",
+                "PipelineII": "75",
+                "PipelineDepth": "467"
+              },
+              {
+                "Name": "LOOP_random_method_min",
+                "TripCount": "100",
+                "Latency": "200",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              },
+              {
+                "Name": "LOOP_random_method_delta_q",
+                "TripCount": "4",
+                "Latency": "38",
+                "PipelineII": "8",
+                "PipelineDepth": "9"
+              },
+              {
+                "Name": "LOOP_LM_init",
+                "TripCount": "10",
+                "Latency": "405",
+                "PipelineII": "38",
+                "PipelineDepth": "64"
+              },
+              {
+                "Name": "LOOP_LM_find_min",
+                "TripCount": "10",
+                "Latency": "10",
+                "PipelineII": "",
+                "PipelineDepth": "1"
+              },
+              {
+                "Name": "LOOP_LM_update",
+                "TripCount": "4",
+                "Latency": "38",
+                "PipelineII": "8",
+                "PipelineDepth": "9"
+              }
+            ]
+          },
+          {
+            "Name": "LOOP_return",
+            "TripCount": "4",
+            "Latency": "46",
+            "PipelineII": "",
+            "PipelineDepth": "10"
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "278",
+          "DSP48E": "2218",
+          "FF": "321192",
+          "LUT": "409740"
+        }
+      },
+      "hls_ik": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "9.972"
+        },
+        "Loops": [{
+            "Name": "LOOP_init",
+            "TripCount": "75",
+            "Latency": "39825",
+            "PipelineII": "",
+            "PipelineDepth": "531",
+            "Loops": [
+              {
+                "Name": "LOOP_init_1",
+                "TripCount": "12",
+                "Latency": "384",
+                "PipelineII": "",
+                "PipelineDepth": "32",
+                "Loops": [{
+                    "Name": "LOOP_init_1_1",
+                    "TripCount": "10",
+                    "Latency": "30",
+                    "PipelineII": "",
+                    "PipelineDepth": "3"
+                  }]
+              },
+              {
+                "Name": "LOOP_init_2",
+                "TripCount": "6",
+                "Latency": "132",
+                "PipelineII": "",
+                "PipelineDepth": "22",
+                "Loops": [{
+                    "Name": "LOOP_init_2_1",
+                    "TripCount": "10",
+                    "Latency": "20",
+                    "PipelineII": "",
+                    "PipelineDepth": "2"
+                  }]
+              },
+              {
+                "Name": "LOOP_init_3",
+                "TripCount": "10",
+                "Latency": "10",
+                "PipelineII": "",
+                "PipelineDepth": "1"
+              },
+              {
+                "Name": "LOOP_init_4",
+                "TripCount": "10",
+                "Latency": "10",
+                "PipelineII": "",
+                "PipelineDepth": "1"
+              }
+            ]
+          }],
+        "Area": {
+          "BRAM_18K": "338",
+          "DSP48E": "2218",
+          "FF": "321784",
+          "LUT": "411695"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "hls_ik",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.1",
+    "Time": "2019-07-26 13:03:45 CST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2018.3"
+  }
+}

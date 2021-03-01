@@ -1,0 +1,6 @@
+*log*
+*.autopilot/
+*.tcls/
+*csim/
+*impl/
+*syn/

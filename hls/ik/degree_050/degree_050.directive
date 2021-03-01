@@ -1,0 +1,488 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="HLS::clear_frame" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::clear_6" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::assign_3" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::assign_6" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::assign_9" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::assign_12" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::add_pp" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::add_cp" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::sub_cp6" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::sub_pp" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::dot" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::dot6" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::cross" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::mul_cp" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::mul_Mp" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::mul_MM" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::mul_Fp" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::mul_FF" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::rot2M" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::M2rot" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="HLS::diff" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_64" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_32" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_16" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_8" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_4" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_2" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="HLS::my_jac_solver" label="LOOP_my_jac_solver" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="20"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::mul_Mp_block" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::mul_MM_block" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::mul_Fp_block" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::mul_FF_block" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_2" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_4" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_8" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_16" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_32" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_64" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_left" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_left" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_left" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_Joint" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_Joint" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_Trans" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_Trans" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_Rot" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_FK_Rot" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_init" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="16"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_init" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="JT" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JJTe_1" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JJTe_1" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JJTe_2" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JJTe_2" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_main" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_update" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="16"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_update" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_return" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="16"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_return" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_fk_solver" label="LOOP_my_fk_solver" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="20"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_main" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="Re" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="100"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="JRe" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="q_test" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="10"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="p_in_LMU" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="f_LMU" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="e_LMU" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="e_norm" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="e" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="err" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="JJTe" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_random_method_JRe" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="50"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_random_method_JRe" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_random_method_delta_q" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="16"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_random_method_delta_q" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_random_method_delta_q" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_random_method_delta_q" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="8"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_init" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="25"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_init" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_init" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="p_in" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_main" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_main" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_update" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="16"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_update" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="8"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_update" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_update" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="f" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JJTe_2_1" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JRe_1" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JRe_2" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_JRe_2_1" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_init_1" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_init_1" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_init_2" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="inter" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_LM_init_2" functionLabel="">
+            <pragma name="DEPENDENCE">
+                <option name="intra" value="" positionalBoolean="type"/>
+                <option name="false" value="" positionalBoolean="dependent"/>
+            </pragma>
+        </directive>
+        <directive functionName="HLS::my_ik" label="LOOP_ITER" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="Jac" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="6"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+
